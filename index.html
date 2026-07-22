@@ -1,1 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>For Pakhi ❤️</title>
+</head>
 
+<body style="background:#ffd6e7;display:flex;justify-content:center;align-items:center;height:100vh;font-family:Arial;">
+
+<div style="background:white;padding:30px;border-radius:20px;text-align:center;box-shadow:0 0 15px pink;">
+
+<h1>🔒</h1>
+
+<h2>For Pakhi Only ❤️</h2>
+
+<p>Enter Password</p>
+
+<input type="password" id="pass" placeholder="Password">
+
+<br><br>
+
+<button onclick="check()">Unlock ❤️</button>
+
+<p id="msg" style="color:red;"></p>
+
+</div>
+
+<script>
+function check() {
+
+let password = document.getElementById("pass").value;
+
+if(password == "onlyus28"){
+alert("Yay! Welcome, Pakhi. 🌸💖");
+}
+else{
+document.getElementById("msg").innerHTML =
+"Umm... কীভাবে ভুল করো, Pakhi? 🥹💗 Try again.";
+}
+
+}
+</script>
+
+</body>
+</html>
