@@ -1,44 +1,143 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>For Pakhi ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Pakhi ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#ff9ecf,#ffcce5);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 0 30px rgba(255,0,100,.25);
+text-align:center;
+width:90%;
+max-width:400px;
+}
+
+h1{
+color:#ff2d75;
+margin-bottom:15px;
+}
+
+p{
+color:#444;
+margin-bottom:20px;
+}
+
+input{
+width:100%;
+padding:12px;
+border-radius:10px;
+border:2px solid pink;
+margin-bottom:15px;
+outline:none;
+}
+
+button{
+padding:12px 25px;
+border:none;
+border-radius:10px;
+background:#ff2d75;
+color:white;
+font-size:17px;
+cursor:pointer;
+}
+
+button:hover{
+background:#ff4f91;
+}
+
+#main{
+display:none;
+}
+
+#msg{
+font-size:22px;
+color:#ff2d75;
+margin-top:20px;
+min-height:70px;
+}
+</style>
+
 </head>
+<body>
 
-<body style="background:#ffd6e7;display:flex;justify-content:center;align-items:center;height:100vh;font-family:Arial;">
+<div class="card" id="login">
 
-<div style="background:white;padding:30px;border-radius:20px;text-align:center;box-shadow:0 0 15px pink;">
-
-<h1>🔒</h1>
-
-<h2>For Pakhi Only ❤️</h2>
+<h1>🔒 Private Memory</h1>
 
 <p>Enter Password</p>
 
 <input type="password" id="pass" placeholder="Password">
 
-<br><br>
+<button onclick="check()">Open ❤️</button>
 
-<button onclick="check()">Unlock ❤️</button>
+</div>
 
-<p id="msg" style="color:red;"></p>
+<div class="card" id="main">
+
+<h1>Happy 19th Birthday Pakhi 🎂💕</h1>
+
+<p id="msg"></p>
+
+<button onclick="next()">Next ❤️</button>
 
 </div>
 
 <script>
-function check() {
 
-let password = document.getElementById("pass").value;
+const messages=[
+"Message 1 ❤️\nWelcome to our little love story...",
+"Message 2 🌸\nEvery moment with you is my favourite memory.",
+"Message 3 💖\nYou make my ordinary days feel magical."
+];
 
-if(password == "onlyus28"){
-alert("Yay! Welcome, Pakhi. 🌸💖");
-}
-else{
-document.getElementById("msg").innerHTML =
-"Umm... কীভাবে ভুল করো, Pakhi? 🥹💗 Try again.";
+let i=0;
+
+function check(){
+
+let p=document.getElementById("pass").value;
+
+if(p==="onlyus28"){
+document.getElementById("login").style.display="none";
+document.getElementById("main").style.display="block";
+document.getElementById("msg").innerText=messages[0];
+}else{
+alert("Wrong Password ❤️");
 }
 
 }
+
+function next(){
+
+i++;
+
+if(i<messages.length){
+document.getElementById("msg").innerText=messages[i];
+}else{
+alert("To be continued... ❤️");
+}
+
+}
+
 </script>
 
 </body>
