@@ -1,139 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Pakhi ❤️</title>
-
+<title>For My Lokkhi Pakhi ❤️</title>
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
 body{
-background:linear-gradient(135deg,#ff9ecf,#ffcce5);
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-overflow:hidden;
+  background: linear-gradient(#ffd6e7,#fff);
+  text-align:center;
+  font-family: Arial;
+  padding:40px;
 }
-
-.card{
-background:white;
-padding:30px;
-border-radius:20px;
-box-shadow:0 0 30px rgba(255,0,100,.25);
-text-align:center;
-width:90%;
-max-width:400px;
+.box{
+  background:white;
+  padding:25px;
+  border-radius:20px;
+  box-shadow:0 0 15px pink;
 }
-
-h1{
-color:#ff2d75;
-margin-bottom:15px;
-}
-
-p{
-color:#444;
-margin-bottom:20px;
-}
-
-input{
-width:100%;
-padding:12px;
-border-radius:10px;
-border:2px solid pink;
-margin-bottom:15px;
-outline:none;
-}
-
 button{
-padding:12px 25px;
-border:none;
-border-radius:10px;
-background:#ff2d75;
-color:white;
-font-size:17px;
-cursor:pointer;
+  background:#ff5c9a;
+  color:white;
+  border:none;
+  padding:12px 25px;
+  border-radius:20px;
+  font-size:18px;
 }
-
-button:hover{
-background:#ff4f91;
+input{
+  padding:12px;
+  border-radius:10px;
+  border:1px solid pink;
 }
-
-#main{
-display:none;
-}
-
 #msg{
-font-size:22px;
-color:#ff2d75;
-margin-top:20px;
-min-height:70px;
+  display:none;
 }
 </style>
-
 </head>
+
 <body>
 
-<div class="card" id="login">
+<div class="box" id="login">
+<h2>🌷 Enter Password 🌷</h2>
 
-<h1>🔒 Private Memory</h1>
+<input id="pass" type="password" placeholder="Password">
+<br><br>
 
-<p>Enter Password</p>
+<button onclick="check()">Enter ❤️</button>
 
-<input type="password" id="pass" placeholder="Password">
+<p id="wrong"></p>
+</div>
 
-<button onclick="check()">Open ❤️</button>
+
+<div class="box" id="msg">
+
+<h1>Welcome My Lokkhi Pakhi 🥹❤️</h1>
+
+<p>🌷 Message Alert 1</p>
+<p>Tomake amar jiboner shobcheye special manush mone hoy ❤️</p>
+
+<p>🌹 Message Alert 2</p>
+<p>Tumi amar hasir karon, amar shanti Pakhi 🫶</p>
+
+<p>🌷 Message Alert 3</p>
+<p>Tomar jonno amar onek bhalobasha roilo ❤️</p>
+
+<!-- Eikhane baki message add kora jabe -->
+
+<h2>🎂 Happy Birthday Pakhi 🎂</h2>
+
+<p>Tomar jonno ekta special video ache ❤️</p>
+
+<button onclick="playMusic()">🎵 Play Song</button>
+
+<audio id="music">
+<source src="hum.mp3" type="audio/mp3">
+</audio>
+
+<script>
+function playMusic(){
+ document.getElementById("music").play();
+}
+</script>
 
 </div>
 
-<div class="card" id="main">
-
-<h1>Happy 19th Birthday Pakhi 🎂💕</h1>
-
-<p id="msg"></p>
-
-<button onclick="next()">Next ❤️</button>
-
-</div>
 
 <script>
 
-const messages=[
-"Message 1 ❤️\nWelcome to our little love story...",
-"Message 2 🌸\nEvery moment with you is my favourite memory.",
-"Message 3 💖\nYou make my ordinary days feel magical."
-];
-
-let i=0;
-
 function check(){
 
-let p=document.getElementById("pass").value;
+let password=document.getElementById("pass").value;
 
-if(p==="onlyus28"){
+if(password=="onlyus28"){
+
 document.getElementById("login").style.display="none";
-document.getElementById("main").style.display="block";
-document.getElementById("msg").innerText=messages[0];
-}else{
-alert("Wrong Password ❤️");
-}
+document.getElementById("msg").style.display="block";
 
 }
 
-function next(){
+else{
 
-i++;
+document.getElementById("wrong").innerHTML=
+"Umm Amar lokkhi pakhi ta bhul korche 🥹, Abar try koro jaan 💋";
 
-if(i<messages.length){
-document.getElementById("msg").innerText=messages[i];
-}else{
-alert("To be continued... ❤️");
 }
 
 }
