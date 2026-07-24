@@ -1,97 +1,106 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!DOCTYPE html>
 <html>
 <head>
 <title>For My Lokkhi Pakhi ❤️</title>
+
 <style>
 body{
-  background: linear-gradient(#ffd6e7,#fff);
-  text-align:center;
-  font-family: Arial;
-  padding:40px;
+background:linear-gradient(#ffc1dc,#fff);
+font-family:Arial;
+text-align:center;
+padding:30px;
 }
+
 .box{
-  background:white;
-  padding:25px;
-  border-radius:20px;
-  box-shadow:0 0 15px pink;
+background:white;
+padding:25px;
+border-radius:25px;
+box-shadow:0 0 20px #ff7eb5;
 }
+
 button{
-  background:#ff5c9a;
-  color:white;
-  border:none;
-  padding:12px 25px;
-  border-radius:20px;
-  font-size:18px;
+background:#ff4f91;
+color:white;
+border:none;
+padding:12px 25px;
+border-radius:25px;
+font-size:18px;
 }
+
 input{
-  padding:12px;
-  border-radius:10px;
-  border:1px solid pink;
+padding:12px;
+border-radius:15px;
+border:2px solid pink;
 }
-#msg{
-  display:none;
+
+#main{
+display:none;
 }
 </style>
+
 </head>
 
 <body>
 
 <div class="box" id="login">
+
 <h2>🌷 Enter Password 🌷</h2>
 
-<input id="pass" type="password" placeholder="Password">
+<input id="password" type="password">
+
 <br><br>
 
 <button onclick="check()">Enter ❤️</button>
 
 <p id="wrong"></p>
-</div>
-
-
-<div class="box" id="msg">
-
-<h1>Welcome My Lokkhi Pakhi 🥹❤️</h1>
-
-<p>🌷 Message Alert 1</p>
-<p>Tomake amar jiboner shobcheye special manush mone hoy ❤️</p>
-
-<p>🌹 Message Alert 2</p>
-<p>Tumi amar hasir karon, amar shanti Pakhi 🫶</p>
-
-<p>🌷 Message Alert 3</p>
-<p>Tomar jonno amar onek bhalobasha roilo ❤️</p>
-
-<!-- Eikhane baki message add kora jabe -->
-
-<h2>🎂 Happy Birthday Pakhi 🎂</h2>
-
-<p>Tomar jonno ekta special video ache ❤️</p>
-
-<button onclick="playMusic()">🎵 Play Song</button>
-
-<audio id="music">
-<source src="hum.mp3" type="audio/mp3">
-</audio>
-
-<script>
-function playMusic(){
- document.getElementById("music").play();
-}
-</script>
 
 </div>
 
 
+<div class="box" id="main">
+
+<h1 id="title">Welcome My Lokkhi Pakhi 🥹❤️</h1>
+
+<p id="message"></p>
+
+<button onclick="nextMsg()" id="next">Next 🌷</button>
+
+</div>
+
+
+
 <script>
+
+let password="onlyus28";
+
+let messages=[
+
+"🌷 Message Alert 1\nTumi amar jiboner onek special ekjon manush ❤️",
+
+"🌹 Message Alert 2\nTomar hasi amar shobcheye pochonder jinis 🥹",
+
+"🌷 Message Alert 3\nTomar sathe katano protita moment amar kache special 💗",
+
+"🌹 Message Alert 4\nTumi amar Lokkhi Pakhi ❤️",
+
+"🌷 Message Alert 5\nTomar jonno amar onek bhalobasha roilo 🫶",
+
+"🌹 Message Alert 6\nAmi chai tomar protita din sundor hok ✨"
+
+];
+
+let count=0;
+
 
 function check(){
 
-let password=document.getElementById("pass").value;
-
-if(password=="onlyus28"){
+if(document.getElementById("password").value==password){
 
 document.getElementById("login").style.display="none";
-document.getElementById("msg").style.display="block";
+document.getElementById("main").style.display="block";
+
+document.getElementById("message").innerHTML=messages[0];
+count=1;
 
 }
 
@@ -104,7 +113,30 @@ document.getElementById("wrong").innerHTML=
 
 }
 
+
+function nextMsg(){
+
+if(count < messages.length){
+
+document.getElementById("message").innerHTML=messages[count];
+
+count++;
+
+}
+
+else{
+
+document.getElementById("message").innerHTML=
+"❤️";
+
+document.getElementById("next").innerHTML="Finish 🌷";
+
+}
+
+}
+
 </script>
+
 
 </body>
 </html>
