@@ -1,4 +1,4 @@
-<!DOCTYPE html><!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <title>For My Lokkhi Pakhi ❤️</title>
@@ -15,7 +15,7 @@ padding:30px;
 background:white;
 padding:25px;
 border-radius:25px;
-box-shadow:0 0 20px #ff7eb5;
+box-shadow:0 0 20px pink;
 }
 
 button{
@@ -59,19 +59,24 @@ display:none;
 
 <div class="box" id="main">
 
-<h1 id="title">Welcome My Lokkhi Pakhi 🥹❤️</h1>
+<h1>Welcome My Lokkhi Pakhi 🥹❤️</h1>
 
 <p id="message"></p>
 
-<button onclick="nextMsg()" id="next">Next 🌷</button>
+<button onclick="nextMsg()">Next 🌷</button>
+
+<br><br>
+
+<button onclick="playMusic()">🎵 Play Song</button>
+
+<audio id="music">
+<source src="hum.mp3" type="audio/mpeg">
+</audio>
 
 </div>
 
 
-
 <script>
-
-let password="onlyus28";
 
 let messages=[
 
@@ -94,7 +99,9 @@ let count=0;
 
 function check(){
 
-if(document.getElementById("password").value==password){
+let pass=document.getElementById("password").value;
+
+if(pass=="onlyus28"){
 
 document.getElementById("login").style.display="none";
 document.getElementById("main").style.display="block";
@@ -119,24 +126,20 @@ function nextMsg(){
 if(count < messages.length){
 
 document.getElementById("message").innerHTML=messages[count];
-
 count++;
 
 }
 
-else{
-
-document.getElementById("message").innerHTML=
-"❤️";
-
-document.getElementById("next").innerHTML="Finish 🌷";
-
 }
+
+
+function playMusic(){
+
+document.getElementById("music").play();
 
 }
 
 </script>
-
 
 </body>
 </html>
