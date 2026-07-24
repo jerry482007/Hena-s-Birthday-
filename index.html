@@ -69,8 +69,8 @@ display:none;
 
 <button onclick="playMusic()">🎵 Play Song</button>
 
-<audio id="music">
-<source src="hum.mp3" type="audio/mpeg">
+<audio id="music" controls>
+  <source src="./hum.mp3" type="audio/mpeg">
 </audio>
 
 </div>
@@ -97,9 +97,10 @@ let messages=[
 let count=0;
 
 
-function check(){
-
-let pass=document.getElementById("password").value;
+function playMusic(){
+  let song = document.getElementById("music");
+  song.play();
+}
 
 if(pass=="onlyus28"){
 
