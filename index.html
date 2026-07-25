@@ -5,93 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Happy 19th Birthday Pakhi ❤️</title>
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
-body{
-background:linear-gradient(135deg,#ffd6e7,#ffc0cb,#ffe4ef);
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-overflow:hidden;
-}
-
-.container{
-width:90%;
-max-width:450px;
-background:white;
-padding:25px;
-border-radius:20px;
-box-shadow:0 0 25px rgba(255,105,180,.4);
-text-align:center;
-}
-
-h1{
-color:#ff1493;
-font-size:30px;
-margin-bottom:20px;
-text-shadow:0 0 10px pink;
-}
-
-input{
-width:100%;
-padding:12px;
-border-radius:10px;
-border:2px solid pink;
-outline:none;
-font-size:18px;
-margin-bottom:15px;
-text-align:center;
-}
-
-button{
-padding:12px 25px;
-border:none;
-border-radius:30px;
-background:#ff1493;
-color:white;
-font-size:18px;
-cursor:pointer;
-margin-top:15px;
-}
-
-button:hover{
-transform:scale(1.05);
-}
-
-#wrong{
-color:red;
-font-weight:bold;
-margin-top:15px;
-}
-
-#main{
-display:none;
-}
-
-#message{
-font-size:22px;
-color:#444;
-margin:25px 0;
-line-height:35px;
-min-height:170px;
-}
-</style>
-
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <audio id="music" loop>
-<source src="hum.mp3" type="audio/mpeg">
+    <source src="hum.mp3" type="audio/mpeg">
 </audio>
 
-<div class="container" id="login">
+<div id="loginBox" class="card">
 
 <h1>🔒 Pakhi Login 💖</h1>
 
@@ -100,7 +23,7 @@ type="password"
 id="password"
 placeholder="Enter Secret Password">
 
-<button onclick="check()">
+<button onclick="checkPassword()">
 Enter ❤️
 </button>
 
@@ -108,106 +31,26 @@ Enter ❤️
 
 </div>
 
-<div class="container" id="main">
+<div id="mainBox" class="card">
 
-<h1>🎀 Happy 19th Birthday Pakhi 🎀</h1>
+<h1 class="title">
+🎀 Happy 19th Birthday Pakhi 🎀
+</h1>
 
-<div id="message"></div>
+<div id="messageBox">
 
-<button onclick="nextMsg()">
+<p id="message"></p>
+
+</div>
+
+<button id="nextBtn"
+onclick="nextMessage()">
 Next 💖
 </button>
 
 </div>
 
-<script>
-
-let messages=[
-
-"💖 Welcome My Lokkhi Pakhi ❤️",
-
-"🌷 Ajker din ta amar jonno khub special... karon aj amar priyo Pakhir birthday.",
-
-"🥹 Allah'r kache amar ekta doa... tumi shobshomoy sustho, bhalo ar hashikhushi thako.",
-
-"❤️ Tomar ekta hashi amar puro din ta shundor kore dey.",
-
-"🌹 Tumi amar jiboner shobcheye shundor upohar.",
-
-"💞 Joto din jabe toto beshi tomake bhalobashbo.",
-
-"🫶 Amar shobcheye priyo jayga holo tomar mon.",
-
-"🤍 Tomake peye ami nijeke onek lucky mone kori.",
-
-"🌸 Tumi amar chokhe shobcheye shundor meye."
-
-];
-
-  "🌺 Amar protita doay tomar naam thake.",
-
-"💕 Tomar sathe katano protita muhurto amar kache onek dami.",
-
-"🌷 Tomar rag, obhiman, hashi... shobkichui amar onek priyo.",
-
-"❤️ Tumi shudhu amar girlfriend na, tumi amar shanti.",
-
-"🥹 Jodi kokhono mon kharap hoy, mone rekho ami shobshomoy tomar pashe achi.",
-
-"💝 Ami chai tomar protita birthday amar sathei katuk.",
-
-"🌸 Tumi amar jiboner shobcheye shundor golpo.",
-
-"💖 Bhalobashi bole bojhano jabe na... tar cheyeo onek beshi bhalobashi tomake.",
-
-"🫂 Jiboner shesh din porjonto tomar haat dhore cholte chai.",
-
-"🌹 Happy 19th Birthday Amar Lokkhi Pakhi... Allah tomake shobshomoy bhalo rakhuk. ❤️"
-
-];
-
-let count = 0;
-
-function check(){
-
-let pass=document.getElementById("password").value;
-
-if(pass==="onlyus28"){
-
-document.getElementById("login").style.display="none";
-document.getElementById("main").style.display="block";
-
-document.getElementById("message").innerHTML=messages[0];
-count=1;
-
-let song=document.getElementById("music");
-song.play().catch(()=>{});
-
-}else{
-
-document.getElementById("wrong").innerHTML="Umm Amar lokkhi pakhi vhul korche 🥹<br>Abar try koro jaan 💋";
-
-}
-
-}
-
-function nextMsg(){
-
-if(count<messages.length){
-
-document.getElementById("message").innerHTML=messages[count];
-count++;
-
-}else{
-
-document.querySelector("button").style.display="none";
-document.getElementById("message").innerHTML="🌷 Etokhon koshto kore amar shob message gulo porso... ❤️<br><br>Kalke ekhane tomar jonno amar special video opekkha korbe. 🎥💖";
-
-}
-
-}
-
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
