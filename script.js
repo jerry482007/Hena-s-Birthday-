@@ -37,7 +37,6 @@ if (pass === "onlyus28") {
   }).catch((error) => {
     console.log("Song blocked", error);
   });
-}
 
 }else{
 
