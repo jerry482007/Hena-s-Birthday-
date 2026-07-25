@@ -28,7 +28,7 @@ const pass = document.getElementById("password").value;
 if (pass === "onlyus28") {
   alert("Welcome ❤️");
 
-  document.getElementById("song").play();
+  document.getElementById("music").play();
 }
 
 document.getElementById("loginBox").style.display="none";
