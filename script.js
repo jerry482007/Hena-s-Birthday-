@@ -43,7 +43,8 @@ document.getElementById("wrong").innerHTML="Umm Amar lokkhi pakhi vhul korche ðŸ
 function nextMessage(){
 
 let music = document.getElementById("music");
-music.play();
+music.muted = false;
+music.play().catch(err => console.log(err));
 
 if(current<messages.length){
 
