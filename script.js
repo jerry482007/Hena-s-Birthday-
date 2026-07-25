@@ -25,7 +25,11 @@ function checkPassword(){
 
 const pass = document.getElementById("password").value;
 
-if(pass === "onlyus28"){
+if (pass === "onlyus28") {
+  alert("Welcome ❤️");
+
+  document.getElementById("song").play();
+}
 
 document.getElementById("loginBox").style.display="none";
 document.getElementById("mainBox").style.display="block";
