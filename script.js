@@ -31,12 +31,6 @@ if (pass === "onlyus28") {
   document.getElementById("loginBox").style.display = "none";
   document.getElementById("mainBox").style.display = "block";
 
-  let music = document.getElementById("music");
-  music.play().then(() => {
-    console.log("Song started");
-  }).catch((error) => {
-    console.log("Song blocked", error);
-  });
 
 }else{
 
