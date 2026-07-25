@@ -28,17 +28,16 @@ const pass = document.getElementById("password").value;
 if (pass === "onlyus28") {
   alert("Welcome ❤️");
 
-  document.getElementById("music").play();
+  document.getElementById("loginBox").style.display = "none";
+  document.getElementById("mainBox").style.display = "block";
+
+  let music = document.getElementById("music");
+  music.play().then(() => {
+    console.log("Song started");
+  }).catch((error) => {
+    console.log("Song blocked", error);
+  });
 }
-
-document.getElementById("loginBox").style.display="none";
-document.getElementById("mainBox").style.display="block";
-
-document.getElementById("message").innerHTML=messages[0];
-current=1;
-
-const music=document.getElementById("music");
-music.play().catch(()=>{});
 
 }else{
 
