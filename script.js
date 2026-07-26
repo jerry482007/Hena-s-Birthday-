@@ -13,8 +13,8 @@ const messages = [
 
 "Tmi amar jibon er shobcheye shundor upohar. 🎁",
 
-"Tmar choto choto rag, obhiman, hashi, jealousy, over processing... shob kichui amar kache onek priyo. 🥹❤️",
-
+"Tmar choto choto rag, obhiman, hashi, jealousy, possessiveness... shob kichui amar kache onek priyo. 🥹❤️",
+  
 "Kono din nijeke eka mone korba na... amar doa ar mon shobshomoy tomar sathei thakbe. 🤍",
 
 "Tumi amar jiboner emon ekjon... jake ami shobshomoy bhalo rakhte chai. 🌸",
