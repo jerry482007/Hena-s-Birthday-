@@ -13,6 +13,8 @@
 <audio id="music" preload="auto" loop>
     <source src="https://res.cloudinary.com/pkodbzjl/video/upload/f_mp3/v1785058077/Screenrecording_20260726_151923_q06dda.mp4" type="audio/mpeg">
 </audio>
+
+<!-- Login Box -->
 <div id="loginBox" class="card">
 
 <h1>🔒 Pakhi Login 💖</h1>
@@ -30,20 +32,39 @@ Enter ❤️
 
 </div>
 
-<div id="mainBox" class="card">
+<!-- Welcome Box -->
+<div id="welcomeBox" class="card" style="display:none;">
+
+<h1 class="title">
+💖 Welcome Pakhi 💖
+</h1>
+
+<p class="welcomeText">
+Welcome pakhi amar banano chotto akta duniya te ❤️
+</p>
+
+<button onclick="startMessages()">
+Start ▶
+</button>
+
+</div>
+
+<!-- Message Box -->
+<div id="mainBox" class="card" style="display:none;">
 
 <h1 class="title">
 🎀 Happy 19th Birthday Pakhi 🎀
 </h1>
 
+<h3 id="alertTitle">
+Message Alert #01
+</h3>
+
 <div id="messageBox">
-
 <p id="message"></p>
-
 </div>
 
-<button id="nextBtn"
-onclick="nextMessage()">
+<button id="nextBtn" onclick="nextMessage()">
 Next 💖
 </button>
 
