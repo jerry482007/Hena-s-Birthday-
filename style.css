@@ -79,3 +79,31 @@ margin-top:15px;
 color:red;
 font-weight:bold;
 }
+#welcomeBox{
+display:none;
+}
+
+.welcomeText{
+font-size:22px;
+color:#444;
+line-height:34px;
+margin:20px 0;
+}
+
+#alertTitle{
+color:#ff1493;
+margin-bottom:15px;
+font-size:22px;
+text-shadow:0 0 8px pink;
+}
+
+#messageBox{
+min-height:220px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+#message{
+white-space:pre-line;
+}
