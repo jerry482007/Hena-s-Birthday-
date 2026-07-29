@@ -95,3 +95,16 @@ function nextMessage() {
     }
   }
 }
+function showFinalMessage() {
+
+  document.getElementById("videoDoneBtn").style.display = "none";
+
+  document.getElementById("finalMessage").style.display = "block";
+
+  const music = document.getElementById("music");
+
+  music.currentTime = 0;
+
+  music.play().catch(() => {});
+
+}
